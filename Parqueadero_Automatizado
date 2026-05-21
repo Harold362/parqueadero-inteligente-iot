@@ -1,0 +1,8 @@
+import serial
+import time
+
+arduino = serial.Serial('/dev/ttyUSB0', 9600)
+time.sleep(2)
+
+def enviar(mensaje):
+    arduino.write((mensaje + "\n").encode())
